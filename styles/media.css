@@ -1,0 +1,43 @@
+@media screen and (max-width: 450px){
+    form{
+        width: 90%;
+        padding: 0.6em;
+    }
+    ul{
+        padding: 0.3em;
+        width: 95%;
+    }
+    button{
+        margin: 1em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    h2{
+        font-size: 1.1em;
+    }
+    form{
+        width: 93%;
+        padding: 0.4em;
+        margin: 0.5em auto;
+    }
+    input[type="text"]{
+        padding: 0.2em;
+        font-size: 1em;
+    }
+    input[type="submit"]{
+        width: 80%;
+    }
+    ul{
+        border: 1px solid red;
+        padding: 0.2em;
+        width: 95%;
+    }
+    ul li{
+        font-size: 0.8em;
+        margin: 0.4em;
+    }
+    button{
+        margin: 1em;
+    }
+}
