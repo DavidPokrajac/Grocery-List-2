@@ -1,0 +1,31 @@
+:root{
+    --font-size: 1.1em;
+    --font-wght: 500;
+}
+
+.delete{
+    float: right;
+}
+
+.delete:hover{
+    cursor: pointer;
+}
+
+.success{
+    font-size: var(--font-size);
+    font-weight: var(--font-wght);
+    color: darkgreen;
+    text-align: center;
+}
+
+.warning{
+    font-size: var(--font-size);
+    font-weight: var(--font-wght);
+    color: firebrick;
+    text-align: center;
+}
+
+.mark{
+    background-color: firebrick;
+    transition: background-color 1s;
+}
