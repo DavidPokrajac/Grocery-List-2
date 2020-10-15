@@ -76,7 +76,23 @@ window.onload = function(){
       }
   });
 
-  
+  // Adding third event listener, stopping event bubbling, deleteing one item if the icon the mouseclick was pressed on contains delete class, creating an alert message, apply CSS, disappear after few seconds
+  ul.addEventListener("click", function(e){
 
+      e.stopPropagation();
+
+      if(e.target.classList.contains("delete")){
+          var li = e.target.parentNode.parentNode;
+          ul.removeChild(li);
+          var success = document.createElement("p");
+          success.textContent = "Grocery successfully removed from the list";
+          success.classList.add("success");
+          groceriesContainer.prepend(success);
+          setTimeout(function(){
+              groceriesContainer.removeChild(success);
+          }, 2000);
+      }
+
+  });
 
 }
