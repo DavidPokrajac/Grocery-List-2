@@ -50,6 +50,32 @@ window.onload = function(){
       }
   });
 
+  // Adding second event listener, when one wants to remove all groceries
+  button.addEventListener("click", function(){
+
+      // if innerHTML property of ul tag is truthy value (if exists), reset it to an empty string, and create new alert message, apply CSS styles, and make it disappear after few seconds
+      // else, if all groceries have already been removed, and there is ntohing in the ul tag, create warning message, apply CSS styles and make it disappear after few seconds
+      if(ul.innerHTML){
+      ul.innerHTML = "";
+      var success = document.createElement("p");
+      success.textContent = "All groceries deleted";
+      success.classList.add("success");
+      groceriesContainer.prepend(success);
+      setTimeout(function(){
+          groceriesContainer.removeChild(success);
+      }, 2000);
+      }
+      else{
+          var warning = document.createElement("p");
+          warning.textContent = "No more groceries to delete";
+          warning.classList.add("warning")
+          groceriesContainer.prepend(warning);
+      setTimeout(function(){
+          groceriesContainer.removeChild(warning);
+      }, 2000);
+      }
+  });
+
   
 
 
